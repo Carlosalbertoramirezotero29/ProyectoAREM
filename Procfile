@@ -1,1 +1,1 @@
-web: java -jar /target/my-app-1.0-jar-with-dependencies.jar -p $PORT
+web: java -jar target/my-app-1.0-jar-with-dependencies.jar -p $PORT
