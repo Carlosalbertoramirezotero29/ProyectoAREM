@@ -36,7 +36,7 @@ public class DaoDataBase {
         idIngreso++;
         client.put(idIngreso, new Cliente(860041299, "GARCIA WERNHER Y CIA S EN C.               ", 2004987, "CALLE 75 NO. 7-30                   ", "OTRAS ACTIVIDADES EMPRESARIALES                ", "BOGOTA D.C.", "ventas@wernher.com.co         ", "10/09/2007", "ALFONSO GARCIA GALVIS         "));
         idIngreso++;
-        client.put(idIngreso, new Cliente(890311341, "LISTOS S.A.                                ", 2778945, "CALLE 21N 8N21 PISO 3               ", "OTRAS ACTIVIDADES EMPRESARIALES                ", "CALI       ", "ventas@listos.com.co          ", "11/05/2017", "Cristian       "));
+        client.put(idIngreso, new Cliente(890311341, "LISTOS S.A.                                ", 2778945, "CALLE 21N 8N21 PISO 3               ", "OTRAS ACTIVIDADES EMPRESARIALES                ", "CALI       ", "ventas@listos.com.co          ", "06/01/2015", "BERNARDO JIMENEZ LOZANO       "));
 
     }
 
@@ -50,6 +50,7 @@ public class DaoDataBase {
                 + "</style>"
                 + "<table style=\"width:100%\">\n"
                 + "  <tr>\n"
+                + "    <th>NIT</th>\n"
                 + "    <th>Nombre empresa</th> \n"
                 + "    <th>Telefono</th>\n"
                 + "    <th>Direccion</th>\n"
@@ -62,7 +63,7 @@ public class DaoDataBase {
         ArrayList<Cliente> arreglo = new ArrayList(client.values());
         for (int i = 0; i < arreglo.size(); i++) {
             res += "<tr>";
-            res += "<td>" + arreglo.get(i).getNombreEmpresa() + "</td><td>" + arreglo.get(i).getTelefono() + "</td><td>" + arreglo.get(i).getDireccion() + "</td><td>" + arreglo.get(i).getCiudad() + "</td><td>" + arreglo.get(i).getEmail() + "</td><td>" + arreglo.get(i).getRepresentante() + "</td><td>" + arreglo.get(i).getSectorActividad() + "</td><td>" + arreglo.get(i).getFechaInicioContrato() + "</td>";
+            res += "<td>" + arreglo.get(i).getID() + "</td><td>" + arreglo.get(i).getNombreEmpresa() + "</td><td>" + arreglo.get(i).getTelefono() + "</td><td>" + arreglo.get(i).getDireccion() + "</td><td>" + arreglo.get(i).getCiudad() + "</td><td>" + arreglo.get(i).getEmail() + "</td><td>" + arreglo.get(i).getRepresentante() + "</td><td>" + arreglo.get(i).getSectorActividad() + "</td><td>" + arreglo.get(i).getFechaInicioContrato() + "</td>";
             res += "</tr>";
         }
         res += "</table>";
